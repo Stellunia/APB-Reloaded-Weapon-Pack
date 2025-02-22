@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>APB_Reloaded_NFAS_TrueOgre</defName>
+        <statBases>
+            <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.75</SightsEfficiency>
+            <ShotSpread>0.12</ShotSpread>
+            <SwayFactor>1.20</SwayFactor>
+            <Mass>3.7</Mass>
+            <Bulk>6.6</Bulk>
+            <WorkToMake>15500</WorkToMake>
+        </statBases>
+
+        <costList>
+            <Chemfuel>10</Chemfuel>
+            <Steel>80</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+
+        <Properties>
+            <recoilAmount>1.8</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+            <warmupTime>0.5</warmupTime>
+            <range>22</range>
+            <burstShotCount>10</burstShotCount>
+            <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+            <soundCast>APB_TrueOgre_Shot</soundCast>
+            <soundCastTail>APB_TrueOgre_Tail</soundCastTail>
+            <soundAiming>APB_TrueOgre_Winding</soundAiming>
+            <muzzleFlashScale>15</muzzleFlashScale>
+        </Properties>
+
+        <AmmoUser>
+            <magazineSize>18</magazineSize>
+            <reloadTime>3.2</reloadTime>
+            <ammoSet>AmmoSet_12Gauge</ammoSet>
+        </AmmoUser>
+
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>Snapshot</aiAimMode>
+            <aimedBurstShotCount>4</aimedBurstShotCount>
+        </FireModes>
+
+        <weaponTags>
+            <li>CE_AI_AssaultWeapon</li>
+        </weaponTags>
+
+        <researchPrerequisite>GasOperation</researchPrerequisite>
+        <AllowWithRunAndGun>true</AllowWithRunAndGun>
+    </Operation>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>APB_Reloaded_ShredderEB</defName>
+        <statBases>
+            <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+            <SightsEfficiency>1.25</SightsEfficiency>
+            <ShotSpread>0.10</ShotSpread>
+            <SwayFactor>1.10</SwayFactor>
+            <Mass>3.2</Mass>
+            <Bulk>4.3</Bulk>
+            <WorkToMake>13500</WorkToMake>
+        </statBases>
+
+        <costList>
+            <Chemfuel>15</Chemfuel>
+            <Steel>60</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+
+        <Properties>
+            <recoilAmount>1.4</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+            <warmupTime>1.0</warmupTime>
+            <range>25</range>
+            <soundCast>APB_Shredder_Shot</soundCast>
+            <soundCastTail>APB_Shredder_Tail</soundCastTail>
+            <muzzleFlashScale>15</muzzleFlashScale>
+        </Properties>
+
+        <AmmoUser>
+            <magazineSize>10</magazineSize>
+            <reloadTime>2</reloadTime>
+            <ammoSet>AmmoSet_12Gauge</ammoSet>
+        </AmmoUser>
+
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>Snapshot</aiAimMode>
+            <aimedBurstShotCount>4</aimedBurstShotCount>
+        </FireModes>
+
+        <weaponTags>
+            <li>CE_AI_AssaultWeapon</li>
+        </weaponTags>
+
+        <researchPrerequisite>GasOperation</researchPrerequisite>
+        <AllowWithRunAndGun>true</AllowWithRunAndGun>
+    </Operation>
+
+    <!-- shotguns with stocks -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[
+            defName="APB_Reloaded_NFAS_TrueOgre" or
+            defName="APB_Reloaded_ShredderEB"
+            ]/tools </xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.55</cooldownTime>
+                    <chanceFactor>1.5</chanceFactor>
+                    <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>5</power>
+                    <cooldownTime>2.02</cooldownTime>
+                    <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>muzzle</label>
+                    <capacities>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.55</cooldownTime>
+                    <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+</Patch>

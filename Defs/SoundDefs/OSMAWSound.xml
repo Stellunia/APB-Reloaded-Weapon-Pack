@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<SoundDef>
+		<defName>APB_OSMAW_Shot</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/OSMAW/rocketlauncher001Shot</clipPath>
+					</li>
+				</grains>
+				<volumeRange>55~65</volumeRange>
+				<pitchRange>0.8940217~1.084783</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+	<defName>APB_OSMAW_Tail</defName>
+	<eventNames />   <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+	<subSounds>
+		<li>
+			<onCamera>True</onCamera>
+			<grains>
+				<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/OSMAW/rocketlaunch_steam02tail</clipPath>
+				</li>
+			</grains>
+			<volumeRange>18~20</volumeRange>
+			<pitchRange>0.9082352~1.091765</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+	<defName>APB_OSMAW_Missile</defName>
+    <sustain>True</sustain>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+			<grains>
+				<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/OSMAW/Missile/missile_loop_05a</clipPath>
+				</li>
+			</grains>
+		  <volumeRange>10~15</volumeRange>
+        <pitchRange>0.95~1.05</pitchRange>      
+        <sustainAttack>0.1</sustainAttack>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+    <defName>APB_OSMAW_Impact</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/OSMAW/Explosion/Boom</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>40~70</volumeRange>
+        <pitchRange>0.8516304~1.254348</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+	<SoundDef>
+	<defName>APB_OSMAW_Lockon</defName>
+    <context>MapOnly</context>
+    <sustain>true</sustain>
+    <maxSimultaneous>2</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>APB_OSMAW_Windup</sustainStartSound>
+	<sustainStopSound>APB_OSMAW_WindDown</sustainStopSound>
+	<subSounds>
+		<li>
+	        <muteWhenPaused>true</muteWhenPaused>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/OSMAW/OSMAW_Windup</clipPath>
+				</li>
+			</grains>
+			<volumeRange>15~20</volumeRange>
+			<pitchRange>1~1</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+  <SoundDef>
+    <defName>APB_OSMAW_Windup</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/OSMAW/OSMAW_Windup</clipPath>
+          </li>
+        </grains>
+		  <volumeRange>15~20</volumeRange>
+		<pitchRange>1~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+	
+	<SoundDef>
+	<defName>APB_OSMAW_WindDown</defName>
+	<context>MapOnly</context>
+	<subSounds>
+		<li>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/OSMAW/OSMAW_WindDown</clipPath>
+				</li>
+			</grains>
+			<volumeRange>15~20</volumeRange>
+			<pitchRange>1~1</pitchRange>
+			<sustainLoop>False</sustainLoop>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+</Defs>

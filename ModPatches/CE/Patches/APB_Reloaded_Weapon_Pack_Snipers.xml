@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>APB_Reloaded_NHVR_Heavy</defName>
+        <statBases>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+            <SightsEfficiency>2.50</SightsEfficiency>
+            <ShotSpread>0.02</ShotSpread>
+            <SwayFactor>1.90</SwayFactor>
+            <Mass>4.5</Mass>
+            <Bulk>5.5</Bulk>
+            <WorkToMake>18500</WorkToMake>
+        </statBases>
+
+        <costList>
+            <Chemfuel>10</Chemfuel>
+            <Steel>100</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+
+        <Properties>
+            <recoilAmount>1.5</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_50BMG_FMJ</defaultProjectile>
+            <warmupTime>2.5</warmupTime>
+            <range>45</range>
+            <soundCast>APB_NHVR_Shot</soundCast>
+            <soundCastTail>APB_NHVR_Tail</soundCastTail>
+            <muzzleFlashScale>20</muzzleFlashScale>
+        </Properties>
+
+        <AmmoUser>
+            <magazineSize>6</magazineSize>
+            <reloadTime>3.2</reloadTime>
+            <ammoSet>AmmoSet_50BMG</ammoSet>
+        </AmmoUser>
+
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+
+        <weaponTags>
+            <li>Bipod_LMG</li>
+        </weaponTags>
+
+        <researchPrerequisite>GasOperation</researchPrerequisite>
+        <AllowWithRunAndGun>false</AllowWithRunAndGun>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[
+            defName="APB_Reloaded_NHVR_Heavy"
+            ]/tools </xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.55</cooldownTime>
+                    <chanceFactor>1.5</chanceFactor>
+                    <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>5</power>
+                    <cooldownTime>2.02</cooldownTime>
+                    <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>muzzle</label>
+                    <capacities>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.55</cooldownTime>
+                    <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+</Patch>

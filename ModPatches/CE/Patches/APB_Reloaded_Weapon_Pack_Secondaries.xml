@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+				
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>APB_Reloaded_Kokoe</defName>
+        <statBases>
+            <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.85</SightsEfficiency>
+            <ShotSpread>0.25</ShotSpread>
+            <SwayFactor>0.70</SwayFactor>
+            <Mass>1.05</Mass>
+			<Bulk>2.05</Bulk>
+			<WorkToMake>12000</WorkToMake>
+        </statBases>
+
+        <costList>
+            <Chemfuel>5</Chemfuel>
+            <Steel>20</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+
+        <Properties>
+            <recoilAmount>2.5</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+            <warmupTime>0.7</warmupTime>
+            <range>25</range>
+            <soundCast>APB_Kokoe_Shot</soundCast>
+            <soundCastTail>APB_Kokoe_Tail</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+
+        <AmmoUser>
+            <magazineSize>10</magazineSize>
+            <reloadTime>1.4</reloadTime>
+            <ammoSet>AmmoSet_45ACP</ammoSet>
+			<reloadOneAtATime>False</reloadOneAtATime>
+        </AmmoUser>
+
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+			<noSingleShot>false</noSingleShot>
+			<noSnapshot>false</noSnapshot>
+        </FireModes>
+
+        <weaponTags>
+			<li>CE_Sidearm</li>
+			<li>CE_AI_Pistol</li>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+		<researchPrerequisite>GasOperation</researchPrerequisite>
+		<AllowWithRunAndGun>true</AllowWithRunAndGun>
+    </Operation>
+
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>APB_Reloaded_ACT</defName>
+		<statBases>
+			<RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+			<SightsEfficiency>0.60</SightsEfficiency>
+			<ShotSpread>0.35</ShotSpread>
+			<SwayFactor>1.20</SwayFactor>
+			<Mass>1.75</Mass>
+			<Bulk>2.05</Bulk>
+			<WorkToMake>10000</WorkToMake>
+		</statBases>
+
+		<costList>
+			<Steel>45</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+
+		<Properties>
+			<recoilAmount>2.5</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_44Magnum_FMJ</defaultProjectile>
+			<warmupTime>1.1</warmupTime>
+			<range>17</range>
+			<soundCast>APB_ACT_Shot</soundCast>
+			<soundCastTail>APB_ACT_Tail</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+		</Properties>
+
+		<AmmoUser>
+			<magazineSize>10</magazineSize>
+			<reloadTime>1.5</reloadTime>
+			<ammoSet>AmmoSet_44Magnum</ammoSet>
+			<reloadOneAtATime>False</reloadOneAtATime>
+		</AmmoUser>
+
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<noSingleShot>false</noSingleShot>
+			<noSnapshot>false</noSnapshot>
+		</FireModes>
+
+		<weaponTags>
+			<li>CE_Sidearm</li>
+			<li>CE_AI_Pistol</li>
+			<li>CE_OneHandedWeapon</li>
+		</weaponTags>
+		<researchPrerequisite>GasOperation</researchPrerequisite>
+		<AllowWithRunAndGun>true</AllowWithRunAndGun>
+	</Operation>
+
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+			defName="APB_Reloaded_Kokoe" or
+			defName="APB_Reloaded_ACT"
+			]/tools </xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>grip</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.54</cooldownTime>
+					<chanceFactor>1.5</chanceFactor>
+					<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>muzzle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.54</cooldownTime>
+					<armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+</Patch>

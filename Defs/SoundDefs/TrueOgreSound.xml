@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<SoundDef>
+		<defName>APB_TrueOgre_Shot</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/TrueOgre/ShotTrueOgre</clipPath>
+					</li>
+				</grains>
+				<volumeRange>30~40</volumeRange>
+				<pitchRange>0.8940217~1.084783</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+	<defName>APB_TrueOgre_Tail</defName>
+	<eventNames />   <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+	<subSounds>
+		<li>
+			<onCamera>True</onCamera>
+			<grains>
+				<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/GenericWeaponSounds/Tail/weapon02_tail02a</clipPath>
+				</li>
+			</grains>
+			<volumeRange>18~20</volumeRange>
+			<pitchRange>0.9082352~1.091765</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+	<defName>APB_TrueOgre_Winding</defName>
+    <context>MapOnly</context>
+    <sustain>true</sustain>
+    <maxSimultaneous>2</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>APB_TrueOgre_Windup</sustainStartSound>
+	<sustainStopSound>APB_TrueOgre_WindDown</sustainStopSound>
+	<subSounds>
+		<li>
+	        <muteWhenPaused>true</muteWhenPaused>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/TrueOgre/TrueOgre_Windup</clipPath>
+				</li>
+			</grains>
+			<volumeRange>15~20</volumeRange>
+			<pitchRange>1~1</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+    <defName>APB_TrueOgre_Windup</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/TrueOgre/TrueOgre_Windup</clipPath>
+          </li>
+        </grains>
+		  <volumeRange>15~20</volumeRange>
+		<pitchRange>1~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+	
+	<SoundDef>
+	<defName>APB_TrueOgre_WindDown</defName>
+	<context>MapOnly</context>
+	<subSounds>
+		<li>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/OSMAW/OSMAW_WindDown</clipPath>
+				</li>
+			</grains>
+			<volumeRange>15~20</volumeRange>
+			<pitchRange>1~1</pitchRange>
+			<sustainLoop>False</sustainLoop>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+</Defs>

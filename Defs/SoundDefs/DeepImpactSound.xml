@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<SoundDef>
+		<defName>APB_EOL_Shot</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/EOL/ChinaLakeFlash</clipPath>
+					</li>
+				</grains>
+				<volumeRange>45~55</volumeRange>
+				<pitchRange>0.8940217~1.084783</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+	<defName>APB_EOL_Tail</defName>
+	<eventNames />   <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+	<subSounds>
+		<li>
+			<onCamera>True</onCamera>
+			<grains>
+				<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/EOL/ChinaLakeTail</clipPath>
+				</li>
+			</grains>
+			<volumeRange>18~20</volumeRange>
+			<pitchRange>0.9082352~1.091765</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+	<defName>APB_EOL_Winding</defName>
+    <context>MapOnly</context>
+    <sustain>true</sustain>
+    <maxSimultaneous>2</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <sustainStartSound>APB_EOL_Windup</sustainStartSound>
+	<sustainStopSound>APB_EOL_WindDown</sustainStopSound>
+	<subSounds>
+		<li>
+	        <muteWhenPaused>true</muteWhenPaused>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/EOL/OEL_Windup</clipPath>
+				</li>
+			</grains>
+			<volumeRange>15~20</volumeRange>
+			<pitchRange>1~1</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+    <defName>APB_EOL_Windup</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/EOL/OEL_Windup</clipPath>
+          </li>
+        </grains>
+		<volumeRange>15~20</volumeRange>
+		<pitchRange>1~1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+	
+	<SoundDef>
+	<defName>APB_EOL_WindDown</defName>
+	<context>MapOnly</context>
+	<subSounds>
+		<li>
+			<grains>
+				<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/OSMAW/OSMAW_WindDown</clipPath>
+				</li>
+			</grains>
+			<volumeRange>15~20</volumeRange>
+			<pitchRange>1~1</pitchRange>
+			<sustainLoop>False</sustainLoop>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+	<SoundDef>
+    <defName>APB_EOL_Impact</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapons/OSMAW/Explosion/Boom</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>25~45</volumeRange>
+        <pitchRange>0.8516304~1.254348</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+ 	<SoundDef>
+	<defName>APB_EOL_ImpactThick</defName>
+	<context>MapOnly</context>
+    <maxSimultaneous>1</maxSimultaneous>  
+	  <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapons/EOL/ChinaLakeThump</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>25~35</volumeRange>
+        <pitchRange>0.8516304~1.254348</pitchRange>
+      </li>
+    </subSounds>
+	</SoundDef>
+  
+</Defs>

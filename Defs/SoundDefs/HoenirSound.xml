@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<SoundDef>
+		<defName>APB_Hoenir_Shot</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/Norsemen/ShotNorsemen</clipPath>
+					</li>
+				</grains>
+				<volumeRange>30~40</volumeRange>
+				<pitchRange>0.8940217~1.084783</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+	<defName>APB_Hoenir_Tail</defName>
+	<eventNames />   <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+	<subSounds>
+		<li>
+			<onCamera>True</onCamera>
+			<grains>
+				<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/Norsemen/TailNorsemen</clipPath>
+				</li>
+			</grains>
+			<volumeRange>18~20</volumeRange>
+			<pitchRange>0.9082352~1.091765</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+</Defs>

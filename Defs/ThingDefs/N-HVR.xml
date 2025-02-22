@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>APB_Reloaded_NHVR_Heavy</defName>
+    <label>NHVR 762</label>
+	<description>The Nekrova High-Velocity Rifle has great accuracy and unsurpassed stopping power, though the weight of the weapon hampers mobility. Calls from politicians to ban the weapon on humanitarian grounds led last year to three high-level assassinations. The shooters were never found.</description>
+    <graphicData>
+      <texPath>Things/N-HVR762_H</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.3</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <tradeTags>
+      <li>WeaponRanged</li>
+    </tradeTags>
+	<recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>750</displayPriority>
+    </recipeMaker>
+	<costList>
+		<Steel>120</Steel>
+		<ComponentIndustrial>4</ComponentIndustrial>
+	</costList>
+	<statBases>
+		<WorkToMake>18500</WorkToMake>
+		<MarketValue>2250</MarketValue>
+		<Mass>10.1</Mass>
+		<AccuracyTouch>0.20</AccuracyTouch>
+		<AccuracyShort>0.30</AccuracyShort>
+		<AccuracyMedium>0.60</AccuracyMedium>
+		<AccuracyLong>0.80</AccuracyLong>
+		<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+	</statBases>
+	<equippedStatOffsets>
+		<MoveSpeed>-0.20</MoveSpeed>
+	</equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_NHVR</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>45</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>APB_NHVR_Shot</soundCast>
+        <soundCastTail>APB_NHVR_Tail</soundCastTail>
+        <muzzleFlashScale>20</muzzleFlashScale>
+      </li>
+    </verbs>
+	<weaponTags>
+      <li>IndustrialGunAdvanced</li>
+      <li>ShortShots</li>
+	  <li>SniperRifle</li>
+	  <li>GunHeavy</li>
+    </weaponTags>
+						   
+	<tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>3.0</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>3.0</cooldownTime>
+      </li>
+    </tools>
+      <modExtensions>
+          <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+              <def>MF_StandardMuzzleFalshThree</def>
+              <drawSize>(1.5,1)</drawSize>
+              <offsets>
+                  <li>(0.73,0.01)</li>
+              </offsets>
+          </li>
+      </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_NHVR</defName>
+    <label>N-HVR 762 bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

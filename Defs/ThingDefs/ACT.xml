@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>APB_Reloaded_ACT</defName>
+    <label>ACT 44</label>
+	<description>The Agrotech Co. of Tanberia's 44 caliber handgun provides a tradeoff between power and firing rate. While long-range accuracy isn't as good as a Colby, the ACT provides a larger magazine and faster reload.</description>
+    <graphicData>
+      <texPath>Things/ACT44_N</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.6</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Revolver</soundInteract>
+
+    <weaponClasses>
+      <li>ShortShots</li>
+    </weaponClasses>
+
+    <tradeTags>
+      <li>WeaponRanged</li>
+    </tradeTags>
+
+	<recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <displayPriority>750</displayPriority>
+    </recipeMaker>
+
+	<costList>
+		<Steel>75</Steel>
+		<ComponentIndustrial>3</ComponentIndustrial>
+	</costList>
+
+	<statBases>
+		<WorkToMake>10000</WorkToMake>
+		<Mass>3.5</Mass>
+		<AccuracyTouch>0.50</AccuracyTouch>
+		<AccuracyShort>0.65</AccuracyShort>
+		<AccuracyMedium>0.55</AccuracyMedium>
+		<AccuracyLong>0.10</AccuracyLong>
+		<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+	</statBases>
+
+	<equippedStatOffsets>
+		<MoveSpeed>+0.10</MoveSpeed>
+	</equippedStatOffsets>
+
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ACT</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>17</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>APB_ACT_Shot</soundCast>
+        <soundCastTail>APB_ACT_Tail</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+	<weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+
+	<tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>1.1</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.1</cooldownTime>
+      </li>
+    </tools>
+      <modExtensions>
+          <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+              <def>MF_StandardMuzzleFalsh</def>
+              <drawSize>(1,0.6)</drawSize>
+              <offsets>
+                  <li>(0.28,0.1)</li>
+              </offsets>
+          </li>
+      </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ACT</defName>
+    <label>ACT bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

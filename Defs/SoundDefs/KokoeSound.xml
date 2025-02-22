@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<SoundDef>
+		<defName>APB_Kokoe_Shot</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/FR0G/Shot_FR0G</clipPath>
+					</li>
+				</grains>
+				<volumeRange>30~40</volumeRange>
+				<pitchRange>0.8940217~1.084783</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+	<defName>APB_Kokoe_Tail</defName>
+	<eventNames />   <context>MapOnly</context>
+    <maxVoices>2</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+	<subSounds>
+		<li>
+			<onCamera>True</onCamera>
+			<grains>
+				<li Class="AudioGrain_Clip">
+						<clipPath>Weapons/FR0G/Tail_FR0G</clipPath>
+				</li>
+			</grains>
+			<volumeRange>18~20</volumeRange>
+			<pitchRange>0.9082352~1.091765</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+	
+</Defs>

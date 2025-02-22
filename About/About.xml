@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>APB: Reloaded Weapon Pack</name>
+  <author>Stellunia</author>
+  <packageId>apb.reloaded.weapon.pack.stellunia</packageId>
+  <supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+  <description>A first, for me. An occupational thing for me to do while I procastinate about other things; I aim to add more weapons that are IRL-adjacent from the free to play game APB Reloaded. Don't play it, it's terrible.
+
+Pistols:
+- FR0G 'Kokoe'
+- ACT 44
+
+Shotguns:
+- NFAS-12 'True Ogre'
+- Shredder EB
+
+SMGs:
+- Norseman 'Hoenir'
+
+Assault Rifles:
+- COBR-A 'Venom'
+- COBR-A 'Adder'
+
+Semi-Automatic Rifles:
+- To be added
+
+Snipers:
+- N-HVR 762
+
+LMGs:
+- ALIG 'Surefire'
+
+Explosive Weapons:
+- OSMAW
+- EOL 'Deep Impact'
+
+All textures were made by me in GIMP.
+
+All sounds belong to APB Reloaded and its respective owners, Reloaded Productions and Little Orbit.</description>
+	
+</ModMetaData>

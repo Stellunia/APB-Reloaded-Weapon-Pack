@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>APB_Reloaded_Venom</defName>
+        <label>COBR-A 'Venom'</label>
+        <description>With its state-of-the-art lightweight body, the Covert Ops Battle Rifle - Assault, or COBR-A, is an exceptionally mobile platform designed to engage targets up to medium-range while on the move, or provide accurate harassment from further out.
+
+        This variant utilizes a foregrip to allow for more stable accuracy, while its accuracy suffers due to utilizing an iron sight.</description>
+        <graphicData>
+            <texPath>Things/COBR-AVenom</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.1</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <weaponClasses>
+            <li>ShortShots</li>
+        </weaponClasses>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <recipeMaker>
+            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+            <displayPriority>750</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Steel>90</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <statBases>
+            <WorkToMake>14500</WorkToMake>
+            <MarketValue>1100</MarketValue>
+            <Mass>8.8</Mass>
+            <AccuracyTouch>0.65</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.50</AccuracyMedium>
+            <AccuracyLong>0.35</AccuracyLong>
+            <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>+0.10</MoveSpeed>
+        </equippedStatOffsets>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Venom</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>27</range>
+                <burstShotCount>8</burstShotCount>
+                <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                <soundCast>APB_COBR-A_Shot</soundCast>
+                <soundCastTail>APB_COBR-A_Tail</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>IndustrialGunAdvanced</li>
+            <li>ShortShots</li>
+        </weaponTags>
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+                <def>MF_StandardMuzzleFalshThree</def>
+                <drawSize>(1,1.4)</drawSize>
+                <offsets>
+                    <li>(0.63,0.02)</li>
+                </offsets>
+            </li>
+        </modExtensions>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_Venom</defName>
+        <label>COBR-A bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>17</damageAmountBase>
+            <speed>100</speed>
+        </projectile>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <SoundDef>
+        <defName>APB_COBR-A_Shot</defName>
+        <context>MapOnly</context>
+        <eventNames />
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/COBR-A/ShotCOBR-A</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>45~50</volumeRange>
+                <pitchRange>0.55~0.65</pitchRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>APB_COBR-A_Tail</defName>
+        <eventNames />   <context>MapOnly</context>
+        <maxVoices>2</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <onCamera>True</onCamera>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/COBR-A/TailCOBR-A</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>12~14</volumeRange>
+                <pitchRange>0.55~0.65</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

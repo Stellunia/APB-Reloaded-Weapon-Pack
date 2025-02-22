@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>APB_Reloaded_Venom</defName> <!-- SCAR-L 5.56x45, -->
+        <statBases>
+            <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+            <SightsEfficiency>1.75</SightsEfficiency>
+            <ShotSpread>0.09</ShotSpread>
+            <SwayFactor>1.00</SwayFactor>
+            <Mass>3.3</Mass>
+            <Bulk>5.5</Bulk>
+            <WorkToMake>14500</WorkToMake>
+        </statBases>
+
+        <costList>
+            <Chemfuel>10</Chemfuel>
+            <Steel>70</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+
+        <Properties>
+            <recoilAmount>1.2</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+            <warmupTime>0.7</warmupTime>
+            <range>27</range>
+            <burstShotCount>8</burstShotCount>
+            <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+            <soundCast>APB_COBR-A_Shot</soundCast>
+            <soundCastTail>APB_COBR-A_Tail</soundCastTail>
+            <muzzleFlashScale>12</muzzleFlashScale>
+        </Properties>
+
+        <AmmoUser>
+            <magazineSize>30</magazineSize>
+            <reloadTime>2</reloadTime>
+            <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+            <reloadOneAtATime>False</reloadOneAtATime>
+        </AmmoUser>
+
+        <FireModes>
+            <aiUseBurstMode>TRUE</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aimedBurstShotCount>4</aimedBurstShotCount>
+        </FireModes>
+
+        <!-- No additional CE weaponTags needed -->
+
+        <researchPrerequisite>GasOperation</researchPrerequisite>
+        <AllowWithRunAndGun>true</AllowWithRunAndGun>
+    </Operation>
+
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>APB_Reloaded_Adder</defName>
+        <statBases>
+            <RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
+            <SightsEfficiency>2.55</SightsEfficiency>
+            <ShotSpread>0.09</ShotSpread>
+            <SwayFactor>1.20</SwayFactor>
+            <Mass>3.4</Mass>
+            <Bulk>5.8</Bulk>
+            <WorkToMake>14500</WorkToMake>
+        </statBases>
+
+        <costList>
+            <Chemfuel>10</Chemfuel>
+            <Steel>70</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+
+        <Properties>
+            <recoilAmount>1.1</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+            <warmupTime>0.7</warmupTime>
+            <range>37</range>
+            <burstShotCount>4</burstShotCount>
+            <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+            <soundCast>APB_COBR-A_Shot</soundCast>
+            <soundCastTail>APB_COBR-A_Tail</soundCastTail>
+            <muzzleFlashScale>12</muzzleFlashScale>
+        </Properties>
+
+        <AmmoUser>
+            <magazineSize>15</magazineSize>
+            <reloadTime>2</reloadTime>
+            <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+            <reloadOneAtATime>False</reloadOneAtATime>
+        </AmmoUser>
+
+        <FireModes>
+            <aiUseBurstMode>TRUE</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+            <aimedBurstShotCount>2</aimedBurstShotCount>
+        </FireModes>
+
+        <!-- No additional CE weaponTags needed -->
+
+        <researchPrerequisite>GasOperation</researchPrerequisite>
+        <AllowWithRunAndGun>true</AllowWithRunAndGun>
+    </Operation>
+
+    <!-- == Shared patches for firearm melee tools == -->
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[
+            defName="APB_Reloaded_Venom" or
+            defName="APB_Reloaded_Adder"
+            ]/tools </xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.55</cooldownTime>
+                    <chanceFactor>1.5</chanceFactor>
+                    <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>5</power>
+                    <cooldownTime>2.02</cooldownTime>
+                    <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>muzzle</label>
+                    <capacities>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>8</power>
+                    <cooldownTime>1.55</cooldownTime>
+                    <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+</Patch>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>APB_Reloaded_OSMAW</defName>
+    <label>OSMAW</label>
+	<description>The Obeya Shoulder-launched Multi-purpose Assault Weapon has long been thought as of overkill in an urban environment. After Armas brought it into the Underground markets however, it wasn't long before both sides were forced to supply their forces with them to keep up.</description>
+    <graphicData>
+      <texPath>Things/OSMAW</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.3</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+	
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+	
+    <tradeTags>
+      <li>WeaponRanged</li>
+    </tradeTags>
+	
+	<recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <displayPriority>750</displayPriority>
+    </recipeMaker>
+	
+	<costList>
+		<Steel>200</Steel>
+		<ComponentIndustrial>4</ComponentIndustrial>
+	</costList>
+	
+	<statBases>
+		<WorkToMake>26000</WorkToMake>
+		<MarketValue>2550</MarketValue>
+		<Mass>15.8</Mass>
+		<AccuracyTouch>0.15</AccuracyTouch>
+		<AccuracyShort>0.30</AccuracyShort>
+		<AccuracyMedium>0.70</AccuracyMedium>
+		<AccuracyLong>0.65</AccuracyLong>
+		<RangedWeapon_Cooldown>7.5</RangedWeapon_Cooldown>
+	</statBases>
+	<equippedAngleOffset>45</equippedAngleOffset>
+<!-- 	<drawOffset>(-0.3, 0, 0)</drawOffset> -->
+	<equippedStatOffsets>
+		<MoveSpeed>-0.50</MoveSpeed>
+	</equippedStatOffsets>
+	
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Rocket_OSMAW</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+		<forcedMissRadius>1.5</forcedMissRadius>
+        <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+        <range>42</range>
+        <soundCast>APB_OSMAW_Shot</soundCast>
+        <soundCastTail>APB_OSMAW_Tail</soundCastTail>
+		<soundAiming>APB_OSMAW_Lockon</soundAiming>
+        <muzzleFlashScale>25</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <onlyManualCast>true</onlyManualCast>
+      </li>
+    </verbs>
+	
+	<weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+	
+	<tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>3.5</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>3.5</cooldownTime>
+      </li>
+    </tools>
+      <modExtensions>
+          <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+              <def>MF_StandardMuzzleFalsh</def>
+              <drawSize>(1.5,1.5)</drawSize>
+              <offsets>
+                  <li>(0.78,0.01)</li>
+              </offsets>
+          </li>
+      </modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Rocket_OSMAW</defName>
+    <label>OSMAW rocket</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+	<projectile>
+		<damageDef>Bomb</damageDef>
+		<damageAmountBase>35</damageAmountBase>
+		<explosionRadius>4.4</explosionRadius>
+		<speed>70</speed>
+		<soundExplode>APB_OSMAW_Impact</soundExplode>
+	  	<soundAmbient>APB_OSMAW_Missile</soundAmbient>
+	</projectile>
+  </ThingDef>
+  
+</Defs>

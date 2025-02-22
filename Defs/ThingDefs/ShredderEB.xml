@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>APB_Reloaded_ShredderEB</defName>
+        <label>Shredder EB</label>
+        <description>The Shredder Automatic Shotgun is a powerful precise weapon that can provide extreme amounts of fire against enemy targets. The bulk of the weapon makes it somewhat unwieldy on the move, despite the tight spread of the custom shells, and as such this weapon is best fired from a marksmanship stance.</description>
+        <graphicData>
+            <texPath>Things/ShredderEB</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <weaponClasses>
+            <li>ShortShots</li>
+        </weaponClasses>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <recipeMaker>
+            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>11</Crafting>
+            </skillRequirements>
+            <displayPriority>750</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <statBases>
+            <WorkToMake>13500</WorkToMake>
+            <MarketValue>1000</MarketValue>
+            <Mass>8.5</Mass>
+            <AccuracyTouch>0.45</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.10</AccuracyLong>
+            <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+        </statBases>
+        <equippedStatOffsets>
+        </equippedStatOffsets>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Pellets_Shredder</defaultProjectile>
+                <warmupTime>1.0</warmupTime>
+                <range>25</range>
+                <burstShotCount>1</burstShotCount>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <soundCast>APB_Shredder_Shot</soundCast>
+                <soundCastTail>APB_Shredder_Tail</soundCastTail>
+                <muzzleFlashScale>15</muzzleFlashScale>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>IndustrialGunAdvanced</li>
+            <li>ShortShots</li>
+        </weaponTags>
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2.0</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>5</power>
+                <cooldownTime>2.0</cooldownTime>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+                <def>MF_StandardMuzzleFalshThree</def>
+                <drawSize>(1,1.4)</drawSize>
+                <offsets>
+                    <li>(0.63,0.07)</li>
+                </offsets>
+            </li>
+        </modExtensions>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>Pellets_Shredder</defName>
+        <label>shredder pellets</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>15</damageAmountBase>
+            <stoppingPower>3</stoppingPower>
+            <speed>90</speed>
+        </projectile>
+    </ThingDef>
+
+</Defs>

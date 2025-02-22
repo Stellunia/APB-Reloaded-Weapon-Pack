@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>APB_Reloaded_Kokoe</defName>
+    <label>FR0G 'Kokoe'</label>
+	<description>Named after the poison dart frogs of South America, the Agrotech FR0G is small and deadly. This close quarter firearm is the weapon of choice for aggressive users or those that prefer to be on the move.</description>
+    <graphicData>
+      <texPath>Things/Kokoe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.1</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+
+    <weaponClasses>
+      <li>ShortShots</li>
+    </weaponClasses>
+
+    <tradeTags>
+      <li>WeaponRanged</li>
+    </tradeTags>
+
+	<recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <displayPriority>435</displayPriority>
+    </recipeMaker>
+
+	<costList>
+		<Steel>40</Steel>
+		<ComponentIndustrial>4</ComponentIndustrial>
+	</costList>
+
+	<statBases>
+		<WorkToMake>12000</WorkToMake>
+		<MarketValue>1200</MarketValue>
+		<Mass>2.1</Mass>
+		<AccuracyTouch>0.70</AccuracyTouch>
+		<AccuracyShort>0.60</AccuracyShort>
+		<AccuracyMedium>0.40</AccuracyMedium>
+		<AccuracyLong>0.40</AccuracyLong>
+		<RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+	</statBases>
+
+	<equippedStatOffsets>
+		<MoveSpeed>+0.20</MoveSpeed>
+	</equippedStatOffsets>
+
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_FR0G</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>25</range>
+        <soundCast>APB_Kokoe_Shot</soundCast>
+        <soundCastTail>APB_Kokoe_Tail</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+	<weaponTags>
+      <li>IndustrialGunAdvanced</li>
+      <li>ShortShots</li>
+    </weaponTags>
+
+	<tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.7</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>0.7</cooldownTime>
+      </li>
+    </tools>
+      <modExtensions>
+          <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+              <def>MF_StandardMuzzleFalshTwo</def>
+              <drawSize>(0.6,0.6)</drawSize>
+              <offsets>
+                  <li>(0.18,0.04)</li>
+              </offsets>
+          </li>
+      </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_FR0G</defName>
+    <label>FR0G bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

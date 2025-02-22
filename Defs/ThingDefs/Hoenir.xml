@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>APB_Reloaded_Hoenir</defName>
+    <label>Norseman 'Hoenir'</label>
+	<description>The Norseman 'Hoenir' is an SMG with a huge magazine that provides an exceptional mix of mobility and suppressive capability.</description>
+    <graphicData>
+      <texPath>Things/Hoenir</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.9</drawSize>
+    </graphicData>
+    <soundInteract>Interact_SMG</soundInteract>
+    <weaponClasses>
+      <li>ShortShots</li>
+    </weaponClasses>
+    <tradeTags>
+      <li>WeaponRanged</li>
+    </tradeTags>
+	<recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>750</displayPriority>
+    </recipeMaker>
+	<costList>
+		<Steel>60</Steel>
+		<ComponentIndustrial>2</ComponentIndustrial>
+	</costList>
+	<statBases>
+		<WorkToMake>12000</WorkToMake>
+		<MarketValue>700</MarketValue>
+		<Mass>5.4</Mass>
+		<AccuracyTouch>0.80</AccuracyTouch>
+		<AccuracyShort>0.55</AccuracyShort>
+		<AccuracyMedium>0.45</AccuracyMedium>
+		<AccuracyLong>0.30</AccuracyLong>
+		<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+	</statBases>
+	<equippedStatOffsets>
+		<MoveSpeed>+0.10</MoveSpeed>
+	</equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Norsemen</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>17</range>
+        <burstShotCount>15</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>APB_Hoenir_Shot</soundCast>
+        <soundCastTail>APB_Hoenir_Tail</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+	<weaponTags>
+      <li>IndustrialGunAdvanced</li>
+      <li>ShortShots</li>
+    </weaponTags>
+	<tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1</cooldownTime>
+      </li>
+    </tools>
+      <modExtensions>
+          <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+              <def>MF_StandardMuzzleFalshTwo</def>
+              <drawSize>(0.6,0.6)</drawSize>
+              <offsets>
+                  <li>(0.44,0.06)</li>
+              </offsets>
+          </li>
+      </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Norsemen</defName>
+    <label>norsemen bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>7</damageAmountBase>
+      <speed>66</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

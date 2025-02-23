@@ -4,7 +4,7 @@
     <ThingDef ParentName="BaseHumanMakeableGun">
         <defName>APB_Reloaded_45ACP</defName>
         <label>Colby 45 ACP</label>
-        <description></description>
+        <description>The Colby .45 AP is an old warhorse of a gun - it was the gun that the FBW was based on and, like its younger brother, has great killing potential and is very powerful even to medium ranges. Unlike its sibling it doesn't have any of the modern comforts - it kicks like a mule and the larger caliber necessitates a smaller magazine.</description>
         <graphicData>
             <texPath>Things/Colby45ACP</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -41,7 +41,7 @@
             <AccuracyShort>0.75</AccuracyShort>
             <AccuracyMedium>0.40</AccuracyMedium>
             <AccuracyLong>0.40</AccuracyLong>
-            <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+            <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
         </statBases>
 
         <equippedStatOffsets>
@@ -53,10 +53,10 @@
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_Colby45ACP</defaultProjectile>
-                <warmupTime>0.3</warmupTime>
-                <range>25</range>
-                <soundCast>M1911_01a</soundCast>
-                <soundCastTail>pistol_tail_02a</soundCastTail>
+                <warmupTime>0.4</warmupTime>
+                <range>20</range>
+                <soundCast>APB_45ACP_Shot</soundCast>
+                <soundCastTail>APB_45ACP_Tail</soundCastTail>
                 <muzzleFlashScale>7</muzzleFlashScale>
             </li>
         </verbs>

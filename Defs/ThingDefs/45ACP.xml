@@ -8,7 +8,7 @@
         <graphicData>
             <texPath>Things/Colby45ACP</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.9</drawSize>
+            <drawSize>0.8</drawSize>
         </graphicData>
         <soundInteract>Interact_Autopistol</soundInteract>
 
@@ -89,7 +89,7 @@
                 <def>MF_StandardMuzzleFalshTwo</def>
                 <drawSize>(0.6,0.6)</drawSize>
                 <offsets>
-                    <li>(0.18,0.04)</li>
+                    <li>(0.30,0.12)</li>
                 </offsets>
             </li>
         </modExtensions>

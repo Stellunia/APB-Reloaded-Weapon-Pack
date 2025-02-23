@@ -52,7 +52,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Grenade_EOL</defaultProjectile>
+                <defaultProjectile>Grenade_EOL_Percussion</defaultProjectile>
                 <warmupTime>0.764</warmupTime>
                 <forcedMissRadius>1.5</forcedMissRadius>
                 <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
@@ -97,15 +97,15 @@
                 <def>MF_StandardMuzzleFalsh</def>
                 <drawSize>(1.5,1.5)</drawSize>
                 <offsets>
-                    <li>(0.28,0.10)</li>
+                    <li>(0.44,0.08)</li>
                 </offsets>
             </li>
         </modExtensions>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
-        <defName>Grenade_EOL</defName>
-        <label>EOL grenade</label>
+        <defName>Grenade_EOL_Percussion</defName>
+        <label>Percussion EOL grenade</label>
         <graphicData>
             <texPath>Things/Projectile/LauncherShot</texPath>
             <graphicClass>Graphic_Single</graphicClass>

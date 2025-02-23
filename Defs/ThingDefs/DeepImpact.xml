@@ -41,7 +41,7 @@
 		<AccuracyShort>0.50</AccuracyShort>
 		<AccuracyMedium>0.50</AccuracyMedium>
 		<AccuracyLong>0.15</AccuracyLong>
-		<RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+		<RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
 	</statBases>
 	
 	<equippedStatOffsets>
@@ -52,7 +52,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Grenade_EOL</defaultProjectile>
+        <defaultProjectile>Grenade_EOL_Concussion</defaultProjectile>
         <warmupTime>0.764</warmupTime>
 		<forcedMissRadius>1.5</forcedMissRadius>
         <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
@@ -104,8 +104,8 @@
   </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
-    <defName>Grenade_EOL</defName>
-    <label>EOL grenade</label>
+    <defName>Grenade_EOL_Concussion</defName>
+    <label>Concussion EOL grenade</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -113,7 +113,7 @@
     <thingClass>Projectile_Explosive</thingClass>
 	<projectile>
 		<damageDef>Bomb</damageDef>
-		<damageAmountBase>30</damageAmountBase>
+		<damageAmountBase>37</damageAmountBase>
 		<explosionRadius>1.5</explosionRadius>
 		<speed>40</speed>
 		<soundExplode>APB_EOL_Impact</soundExplode>

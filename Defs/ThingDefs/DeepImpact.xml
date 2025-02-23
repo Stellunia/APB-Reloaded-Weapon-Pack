@@ -57,7 +57,7 @@
 		<forcedMissRadius>1.5</forcedMissRadius>
         <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
         <range>27</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>50</ticksBetweenBurstShots>
         <soundCast>APB_EOL_Shot</soundCast>
         <soundCastTail>APB_EOL_Tail</soundCastTail>

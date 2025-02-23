@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>APB_Reloaded_EOL_Hammer</defName>
+        <label>EOL 'Hammer'</label>
+        <description>Known by Infantry as the 'End of Life', the Explosive Ordnance Launcher can fire many different grenades. This version fires a 40mm variant of Percussion grenades.</description>
+        <graphicData>
+            <texPath>Things/EOLHammer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.0</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+
+        <weaponClasses>
+            <li>ShortShots</li>
+        </weaponClasses>
+
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+
+        <recipeMaker>
+            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+            <displayPriority>750</displayPriority>
+        </recipeMaker>
+
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+
+        <statBases>
+            <WorkToMake>22500</WorkToMake>
+            <MarketValue>1250</MarketValue>
+            <Mass>6.4</Mass>
+            <AccuracyTouch>0.35</AccuracyTouch>
+            <AccuracyShort>0.40</AccuracyShort>
+            <AccuracyMedium>0.45</AccuracyMedium>
+            <AccuracyLong>0.10</AccuracyLong>
+            <RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+        </statBases>
+
+        <equippedStatOffsets>
+            <MoveSpeed>+0.20</MoveSpeed>
+        </equippedStatOffsets>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Grenade_EOL</defaultProjectile>
+                <warmupTime>0.764</warmupTime>
+                <forcedMissRadius>1.5</forcedMissRadius>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+                <range>23</range>
+                <burstShotCount>2</burstShotCount>
+                <ticksBetweenBurstShots>50</ticksBetweenBurstShots>
+                <soundCast>APB_EOL_Shot</soundCast>
+                <soundCastTail>APB_EOL_Tail</soundCastTail>
+                <soundAiming>APB_EOL_Winding</soundAiming>
+                <muzzleFlashScale>17</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <onlyManualCast>true</onlyManualCast>
+            </li>
+        </verbs>
+
+        <weaponTags>
+            <li>IndustrialGunAdvanced</li>
+        </weaponTags>
+
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+                <def>MF_StandardMuzzleFalsh</def>
+                <drawSize>(1.5,1.5)</drawSize>
+                <offsets>
+                    <li>(0.28,0.10)</li>
+                </offsets>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Grenade_EOL</defName>
+        <label>EOL grenade</label>
+        <graphicData>
+            <texPath>Things/Projectile/LauncherShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <explosionRadius>2.5</explosionRadius>
+            <speed>40</speed>
+            <soundExplode>APB_EOL_Impact</soundExplode>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>APB_EOL_ImpactThick</soundHitThickRoof>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+        </projectile>
+    </ThingDef>
+
+</Defs>

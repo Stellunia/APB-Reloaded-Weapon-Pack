@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>APB_Reloaded_45ACP</defName>
+        <label>Colby 45 ACP</label>
+        <description></description>
+        <graphicData>
+            <texPath>Things/Colby45ACP</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.9</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Autopistol</soundInteract>
+
+        <weaponClasses>
+            <li>ShortShots</li>
+        </weaponClasses>
+
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+
+        <recipeMaker>
+            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+            <displayPriority>435</displayPriority>
+        </recipeMaker>
+
+        <costList>
+            <Steel>40</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+
+        <statBases>
+            <WorkToMake>14000</WorkToMake>
+            <MarketValue>900</MarketValue>
+            <Mass>2.0</Mass>
+            <AccuracyTouch>0.55</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.40</AccuracyMedium>
+            <AccuracyLong>0.40</AccuracyLong>
+            <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+        </statBases>
+
+        <equippedStatOffsets>
+            <MoveSpeed>+0.05</MoveSpeed>
+        </equippedStatOffsets>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Colby45ACP</defaultProjectile>
+                <warmupTime>0.3</warmupTime>
+                <range>25</range>
+                <soundCast>M1911_01a</soundCast>
+                <soundCastTail>pistol_tail_02a</soundCastTail>
+                <muzzleFlashScale>7</muzzleFlashScale>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>IndustrialGunAdvanced</li>
+            <li>ShortShots</li>
+        </weaponTags>
+
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7</power>
+                <cooldownTime>0.8</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>3</power>
+                <cooldownTime>0.8</cooldownTime>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+                <def>MF_StandardMuzzleFalshTwo</def>
+                <drawSize>(0.6,0.6)</drawSize>
+                <offsets>
+                    <li>(0.18,0.04)</li>
+                </offsets>
+            </li>
+        </modExtensions>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_Colby45ACP</defName>
+        <label>Colby 45 ACP bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <speed>80</speed>
+        </projectile>
+    </ThingDef>
+
+</Defs>
